@@ -1,0 +1,390 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*@font-face{
+    src: url(../../fonts/GothamBold.ttf);
+    font-family: Gotham SSm;
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    src: url(../../fonts/GothamBoldItalic.ttf);
+    font-family: Gotham SSm;
+    font-weight: bold;
+    font-style: italic;
+}*/
+@font-face{
+    src: url(../../fonts/GothamBook.ttf);
+    font-family: Gotham SSm;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    src: url(../../fonts/GothamBookItalic.ttf);
+    font-family: Gotham SSm;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*@font-face{
+    src: url(../../fonts/Lora-SemiBold.ttf);
+    font-family: lora;
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    src: url(../../fonts/Lora-SemiBoldItalic.ttf);
+    font-family: lora;
+    font-weight: bold;
+    font-style: italic;
+}*/
+.font-Gotham{
+    font-family: Gotham SSm;
+}
+.bodilies {
+  margin: 0;
+  font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5E6282;
+  background-color: #FFFEFE;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.zikvontron{
+   max-width: 100% !important; 
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.0);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.oukrons{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;  
+}
+
+.brandy{
+    cursor: pointer;
+    width: 110px;
+}
+
+.modelholder{
+    max-width: 100% !important; 
+    height: 1000px; 
+}
+
+.btn-mark-wall {
+    color: #212832;
+    border-color: rgba(23, 26, 32, 0.8);
+}
+.btn-mark-wall:hover {
+    color: #FFFEFE;
+    background-color: rgba(23, 26, 32, 0.8);
+    border-color: rgba(23, 26, 32, 0.8);
+}
+.redigropro{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1),
+    0 0 0 1000px rgba(255,255,255,0.95);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 11;
+    font-family: Gotham SSm;
+    visibility: hidden;
+}
+.redigropro.active{
+    visibility: visible; 
+}
+.xrdg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+/*FOR ZOMMERS*/
+.robody{
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.wrappertainer{
+    max-width: 100% ; 
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .oukrons{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    
+}
+ .content{
+    text-align: center;
+ }
+ .content h1{
+    font-size: 95px;
+    color: #fff;
+    margin-bottom: 50px;
+ }
+ .content a{
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 0%;
+    transition:  0.3s;
+ }
+ .content a:hover{
+    background-color: #fff;
+    color: #000;
+ }
+
+ .concanto{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .concanto .spinBtn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 4px solid #ffd2d2;
+    cursor: pointer;
+    user-select: none;
+}
+.concanto .spinBtn::before{
+    content: '';
+    position: absolute;
+    top: -28px;
+    width: 20px;
+    height: 30px;
+    background: #fff;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+.concanto .spinBtnOF{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 4px solid #ffd2d2;
+    cursor: pointer;
+    user-select: none;
+}
+.concanto .spinBtnOF::before{
+    content: '';
+    position: absolute;
+    top: -28px;
+    width: 20px;
+    height: 30px;
+    background: #fff;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+.concanto .wheel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #271749a1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #c6aab6,
+    -5px -5px 10px #fff4ff;
+    transition: transform 5s ease-in-out;
+}
+.concanto .wheel .whealers{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 56% 0, 100% 100%, 0 56%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+.concanto .wheel .whealers span{
+    position: relative;
+    transform: rotate(45deg);
+    font-family: Gotham SSm;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 3px 5px 2px rgba(0,0,0,0.15);
+}
+
+.concanto .wheel .whealers span::after{
+    content: '';
+    position: absolute;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+.medalpro{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: #fff;
+    width: 450px;
+    min-height: 300px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1),
+    0 0 0 1000px rgba(255,255,255,0.95);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 40px;
+    z-index: 11;
+    font-family: Gotham SSm;
+    visibility: hidden;
+}
+.medalpro.active{
+    visibility: visible; 
+}
+.medal-form{
+    margin-top: 10px;
+}
+.medalsfr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xtbc{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+}
+#my-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 12;
+    visibility: hidden;
+    pointer-events: none;
+}
+#my-canvas.active{
+    visibility: visible; 
+}
+.gwmodel{
+    color: #181137;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+
+     .modelholder{
+        max-width: 100% !important; 
+        height: 500px;
+    }
+    .zikvontron{
+       width: 100%;
+       height: 500px;
+    }
+    .redigropro{
+        width: 300px;
+        height: 250px;
+        font-size: 12px;
+    }
+
+    /*Zommers*/
+    .wrappertainer{
+       width: 100%;
+       height: 500px;
+    }
+    .concanto{
+        width: 300px;
+        height: 300px;
+    }
+
+    .concanto .wheel .whealers span{
+        font-size: 16px;
+    }
+    .medalpro{
+        width: 300px;
+        min-height: 250px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .redigropro{
+        width: 200px;
+        height: 150px;
+        font-size: 10px;
+    }
+    /*Zommers*/
+    .concanto{
+        width: 200px;
+        height: 200px;
+    }
+    .concanto .wheel .whealers span{
+        font-size: 12px;
+    }
+    .medalpro{
+        width: 200px;
+        min-height: 150px;
+        font-size: 10px;
+    }
+}
