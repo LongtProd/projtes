@@ -101,6 +101,7 @@ cobmes.forEach(function (item, index, array) {
             // Set the innerHTML property of the div element to display the fetched content
             //console.log(xhr.response)
             brighterCro.innerHTML = xhr.response;
+            combesscri();
         }
         else {
             console.log('Request failed.  Returned status of ' + xhr.status);
@@ -108,26 +109,30 @@ cobmes.forEach(function (item, index, array) {
         };
         xhr.send();
 
-        setTimeout(() => {
-            var script = document.createElement('script');
-            var surl = 'assets/js/index.min.js';
-            script.src = surl;
-            document.body.appendChild(script);
-    
-            var script = document.createElement('script');
-            var scurl = 'assets/js/royinmath.js';
-            script.src = scurl;
-            document.body.appendChild(script);
-        }, 1000);
-        xbody.classList.remove('ldbody');
-        xbody.classList.add('bodilies');
-        xbody.style.background = "#454954";
-        document.getElementById("navli").style.display = "none";
         
-        document.getElementById("worping").style.display = "none";
-        document.getElementById("top").style.display  = "";
     });
 });
+
+function combesscri(){
+        var script = document.createElement('script');
+        var surl = 'assets/js/index.min.js';
+        script.src = surl;
+        document.body.appendChild(script);
+        var script = document.createElement('script');
+        var scurl = 'assets/js/royinmath.js';
+        script.src = scurl;
+        document.body.appendChild(script);
+        combesfin();
+}
+function combesfin() {
+    xbody.classList.remove('ldbody');
+    xbody.classList.add('bodilies');
+    xbody.style.background = "#454954";
+    document.getElementById("navli").style.display = "none";
+    
+    document.getElementById("worping").style.display = "none";
+    document.getElementById("top").style.display  = "";
+}
 
 redigroxrdg.onclick = function(){
     redigroproqro.classList.remove('active');
