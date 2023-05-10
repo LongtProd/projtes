@@ -2,6 +2,7 @@ var xbody = document.getElementsByTagName("BODY")[0];
 var cobmes = document.querySelectorAll(".btn-mark-wall");
 var redigroproqro = document.querySelector("#redigroproqro");
 var redigroxrdg = document.querySelector("#redigroxrdg");
+var broadcheckhas = false;
 
 var kyrvfflxc = "";
 dosofink();
@@ -21,7 +22,7 @@ function bowmaus(iviv, whos) {
    let giftwindow = newURL;
    $.ajax({
        type: "POST",
-       url: "https://bastestquest.000webhostapp.com//tromideian/", 
+       url: "https://bastestquest.000webhostapp.com/tromideian/", 
        dataType: "json",
        data: {giftwindow: giftwindow},
        success: function(responds){
@@ -29,12 +30,12 @@ function bowmaus(iviv, whos) {
            kyrvfflxc = responds;
            var vralx = JSON.stringify(kyrvfflxc.map(lcpk => lcpk.giftcode)).replace(/[\[\]"]+/g,""); 
            if(vralx.length == 4){
+            broadcheckhas = true;
             furwork();
            }else{
                furror();
            }
            
-           //newrannew();
        }, error : function(jqXHR, textStatus, errorThrown) {
            let useronline = teslaser();
            if (useronline == 0) {
@@ -48,12 +49,12 @@ function bowmaus(iviv, whos) {
 
 function furwork(){
     boxingworks();
-    document.getElementById("redigroproheader").innerHTML = `Your Invite link is valid.`;
-    document.getElementById("redigroprobody").innerHTML = `Once used in the raffle, you can't use this link again. Good Luck!!!`;
+    // document.getElementById("redigroproheader").innerHTML = `Your Invite link is valid.`;
+    // document.getElementById("redigroprobody").innerHTML = `Once used in the raffle, you can't use this link again. Good Luck!!!`;
 }
 function furror(){
     boxingworks();
-    runoffgifts()
+    //runoffgifts()
     document.getElementById("redigroproheader").innerHTML = `Your Invite link has expired or its invalid.`;
     document.getElementById("redigroprobody").innerHTML = `Sorry! You need an invite link to participate in the raffle, to win a Tesla`;
 }
@@ -63,7 +64,7 @@ function boxingworks(){
     xbody.classList.remove('ldbody');
     xbody.classList.add('bodilies');
     document.getElementById("top").style.display  = "";
-    redigroproqro.classList.add('active');
+    //redigroproqro.classList.add('active');
 }
 function runoffgifts() {
     cobmes.forEach(function (item, index, array) { 
@@ -83,32 +84,36 @@ setTimeout(() => {
 
 cobmes.forEach(function (item, index, array) { 
     item.addEventListener("click", function() { 
-        //document.getElementById("brighterCro").style.display = "none";
+        if(broadcheckhas == true){
+            document.getElementById("brighterCro").innerHTML = "";
+            document.getElementById("worping").style.display = "";
+            xbody.classList.remove('bodilies');
+            xbody.classList.add('ldbody');
+            document.getElementById("top").style.display  = "none";
+            window.scrollTo(0, 0);
+            var brighterCro = document.getElementById("brighterCro");
 
-        document.getElementById("brighterCro").innerHTML = "";
-        document.getElementById("worping").style.display = "";
-        xbody.classList.remove('bodilies');
-        xbody.classList.add('ldbody');
-        document.getElementById("top").style.display  = "none";
-        window.scrollTo(0, 0);
-        var brighterCro = document.getElementById("brighterCro");
 
-        var xhr = new XMLHttpRequest();
-        var url = 'zoomcloser.html';
-        xhr.open('GET', url, true);
-        xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Set the innerHTML property of the div element to display the fetched content
-            //console.log(xhr.response)
-            brighterCro.innerHTML = xhr.response;
-            combesscri();
+            var xhr = new XMLHttpRequest();
+            var url = 'zoomcloser.html';
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Set the innerHTML property of the div element to display the fetched content
+                //console.log(xhr.response)
+                brighterCro.innerHTML = xhr.response;
+                combesscri();
+            }
+            else {
+                console.log('Request failed.  Returned status of ' + xhr.status);
+            }
+            };
+            xhr.send();
+        }else{
+            redigroproqro.classList.add('active');
+            document.getElementById("redigroproheader").innerHTML = `Your Invite link has expired or its invalid.`;
+            document.getElementById("redigroprobody").innerHTML = `Sorry! You need an invite link to participate in the raffle, to win a Tesla`;
         }
-        else {
-            console.log('Request failed.  Returned status of ' + xhr.status);
-        }
-        };
-        xhr.send();
-
         
     });
 });
@@ -118,10 +123,13 @@ function combesscri(){
         var surl = 'assets/js/index.min.js';
         script.src = surl;
         document.body.appendChild(script);
-        var script = document.createElement('script');
-        var scurl = 'assets/js/royinmath.js';
-        script.src = scurl;
-        document.body.appendChild(script);
+        combessemifin();
+}
+function combessemifin() {
+    var sccript = document.createElement('script');
+        var sccurl = 'assets/js/royinmath.js';
+        sccript.src = sccurl;
+        document.body.appendChild(sccript);
         combesfin();
 }
 function combesfin() {
@@ -133,7 +141,6 @@ function combesfin() {
     document.getElementById("worping").style.display = "none";
     document.getElementById("top").style.display  = "";
 }
-
 redigroxrdg.onclick = function(){
     redigroproqro.classList.remove('active');
     redigroproqro.classList.remove('active');

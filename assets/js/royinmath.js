@@ -1,12 +1,12 @@
 var giftreach = [
-    {"wrapcode": 4996,"wrapgift": "Try Again"},
-    {"wrapcode": 5040,"wrapgift": "Model X"},
-    {"wrapcode": 5084,"wrapgift": "Model Y"},
+    {"wrapcode": 4996,"wrapgift": "$20,000 Worth of Tesla Stock (TSLA)"},
+    {"wrapcode": 5040,"wrapgift": "A Brand New Model X Tesla"},
+    {"wrapcode": 5084,"wrapgift": "A Brand New Model Y Tesla"},
     {"wrapcode": 5128,"wrapgift": "Invite Link"},
-    {"wrapcode": 5174,"wrapgift": "Model S"},
-    {"wrapcode": 5218,"wrapgift": "Model 3"},
+    {"wrapcode": 5174,"wrapgift": "A Brand New  Model S Tesla"},
+    {"wrapcode": 5218,"wrapgift": "A Brand New  Model 3 Tesla"},
     {"wrapcode": 5264,"wrapgift": "Try Again"},
-    {"wrapcode": 5310,"wrapgift": "Model S"}
+    {"wrapcode": 5310,"wrapgift": "$35,000 Worth of Dodge Coin (DOGE)"}
   ];
 let wheel =  document.querySelector('.wheel');
 let spinBtn = document.querySelector('.spinBtn');
@@ -44,7 +44,7 @@ spinBtn.onclick = function(){
     setTimeout(() => {
         
         document.querySelector('#medalheader').innerHTML = "Congratulations!!!";
-        document.querySelector('#medalbody').innerHTML = `You just won a brand new <span class="gwmodel">${giftwon} Tesla</span>.<br>
+        document.querySelector('#medalbody').innerHTML = `You just won  <span class="gwmodel">${giftwon}.</span>.<br>
         Please fill the form below to receive you next email.<br>
         Congratulations once more.`;
         mycanvas.style.display = "";
